@@ -1,0 +1,440 @@
+/*
+	1. background색을 원하는 색으로 넣어주세요.
+
+	2. 새의 몸통을 원하는대로 꾸며주세요.
+	- 센터정렬하면서 중앙보다 살짝 더 아래 위치하게 해주세요.
+
+*/
+
+body
+{
+	min-height: 100vh;
+    position: relative;
+	overflow: hidden;
+}
+
+.hide
+{
+	display: none;
+}
+
+.ant
+{
+	width: 200px;
+	height: 200px;	
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -75px 0px 0px -50px;
+	/* border: 1px solid red; */
+
+	/* 이미지 삽입	
+	background-image: url("bgmain.jpg");
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat; */
+}
+
+.ant
+{
+	animation: antmove 10s linear infinite;
+}
+
+@keyframes antmove
+{
+	0%
+	{
+		transform: translate(0%, 300%) rotate(30deg);
+	}
+	30%
+	{
+		transform: translate(70%, 50%) rotate(25deg);
+	}
+	35%
+	{
+		transform: translate(65%, 55%) rotate(-50deg);
+	}
+	50%
+	{
+		transform: translate(0%, 0%) rotate(-50deg);
+	}
+	70%
+	{
+		transform: translate(-70%, -50%) rotate(-45deg);
+	}
+	75%
+	{
+		transform: translate(-65%, -55%) rotate(30deg);
+	}
+	100%
+	{
+		transform: translate(0%, -300%) rotate(30deg);
+	}	
+}
+
+.ant div
+{
+	border: 1px solid black;
+	background-color: darkblue;
+}
+
+.head
+{
+	width: 28px;
+	height: 26px;
+	border-radius: 50%;
+
+	position: absolute;
+	bottom: 130px;
+	left: 50%;
+	margin: -13px 0px 0px -14px;
+	border-radius: 50%;
+
+	z-index: 3.3;
+}
+
+.chest
+{
+	width: 16px;
+	height: 40px;
+	border-radius: 50%;
+
+	position: absolute;
+	bottom: 90px;
+	left: 50%;
+	margin: -20px 0px 0px -8px;
+	border-radius: 50%;
+	
+	z-index: 3.2;
+}
+
+.belly
+{
+	width: 20px;
+	height: 70px;
+	
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	margin: -35px 0px 0px -10px;
+	border-radius: 50%;
+
+	z-index: 3.1;
+}
+
+.head1, .head2
+{
+	width: 2px;
+	height: 25px;
+
+	border-radius: 4px;
+
+	transform-origin: bottom;
+
+	position: absolute;
+	top: -20px;
+
+	z-index: 3.0;
+}
+
+.head1
+{
+	right: 3px;
+	transform: rotate(70deg);
+	animation: head1 1s ease-in-out infinite;
+}
+
+@keyframes head1
+{
+	0%{transform: rotate(70deg);}
+	25%{transform: rotate(80deg);}
+	80%{transform: rotate(60deg);}
+	100%{transform: rotate(70deg);}
+}
+
+.head2
+{
+	left: 3px;
+	transform: rotate(-70deg);
+	animation: head2 1s ease-in-out infinite;
+}
+
+@keyframes head2
+{
+	0%{transform: rotate(-70deg);}
+	15%{transform: rotate(-80deg);}
+	90%{transform: rotate(-60deg);}
+	100%{transform: rotate(-70deg);}
+}
+
+.head3, .head4
+{
+	width: 2px;
+	height: 20px;
+
+	border-radius: 4px;
+
+	transform-origin: bottom;
+
+	position: absolute;
+	top: -20px;
+	z-index: 2.9;
+}
+
+.head3
+{
+	transform-origin: bottom;
+	transform: rotate(-60deg);
+	animation: head3 1s ease-in-out infinite;
+}
+
+@keyframes head3
+{
+	0%{transform: rotate(-60deg);}
+	30%{transform: rotate(-30deg);}
+	80%{transform: rotate(-90deg);}
+	100%{transform: rotate(-60deg);}
+}
+
+.head4
+{
+	transform-origin: bottom;
+	transform: rotate(60deg);
+	animation: head4 1s ease-in-out infinite;
+}
+
+@keyframes head4
+{
+	0%{transform: rotate(60deg);}
+	20%{transform: rotate(30deg);}
+	80%{transform: rotate(90deg);}
+	100%{transform: rotate(60deg);}
+}
+
+.leg
+{
+	width: 2px;
+	height: 20px;
+
+	position: absolute;
+
+	transform-origin: bottom;
+
+	z-index: 2.0;
+}
+
+.sublimb
+{
+	width: 2px;
+	height: 25px;
+
+	border-radius: 4px;
+
+	transform-origin: bottom;
+	position: absolute;
+	top: -25px;
+
+	z-index: 1.0;
+}
+
+.legul
+{
+	top: -10px;
+	left: 0px;
+
+	transform: rotate(-60deg);
+	animation: legul 2s ease-in-out infinite;
+}
+
+@keyframes legul
+{
+	0%{transform: rotate(-60deg);}
+	25%{transform: rotate(-70deg);}
+	75%{transform: rotate(-50deg);}
+	100%{transform: rotate(-60deg);}
+}
+
+.legul .sublimb
+{
+	transform: rotate(15deg);
+	animation: legulsub 2s ease-in-out infinite;
+}
+
+@keyframes legulsub
+{
+	0%{transform: rotate(15deg);}
+	25%{transform: rotate(-20deg);}
+	75%{transform: rotate(30deg);}
+	100%{transform: rotate(15deg);}
+}
+
+.legur
+{
+	top: -10px;
+	right: 0px;
+
+	transform: rotate(60deg);
+	animation: legur 2s ease-in-out infinite;
+}
+
+@keyframes legur
+{
+	0%{transform: rotate(60deg);}
+	25%{transform: rotate(50deg);}
+	75%{transform: rotate(70deg);}
+	100%{transform: rotate(60deg);}
+}
+
+.legur .sublimb
+{
+	transform: rotate(-15deg);
+	animation: legursub 2s ease-in-out infinite;
+}
+
+@keyframes legursub
+{
+	0%{transform: rotate(-15deg);}
+	25%{transform: rotate(-30deg);}
+	75%{transform: rotate(20deg);}
+	100%{transform: rotate(-15deg);}
+}
+
+.legml
+{
+	top: 5px;
+	left: 0px;
+
+	transform: rotate(-90deg);
+	animation: legml 2s ease-in-out infinite;
+}
+
+@keyframes legml
+{
+	0%{transform: rotate(-90deg);}
+	25%{transform: rotate(-45deg);}
+	75%{transform: rotate(-135deg);}
+	100%{transform: rotate(-90deg);}
+}
+
+.legml .sublimb
+{
+	top: -30px;
+	height: 30px;
+	transform: rotate(-70deg);
+	animation: legmlsub 2s ease-in-out infinite;
+}
+
+@keyframes legmlsub
+{
+	0%{transform: rotate(-70deg);}
+	25%{transform: rotate(-60deg);}
+	75%{transform: rotate(-40deg);}
+	100%{transform: rotate(-70deg);}
+}
+
+.legmr
+{
+	top: 5px;
+	right: 0px;
+
+	transform: rotate(90deg);
+	animation: legmr 2s ease-in-out infinite;
+}
+
+@keyframes legmr
+{
+	0%{transform: rotate(90deg);}
+	25%{transform: rotate(135deg);}
+	75%{transform: rotate(45deg);}
+	100%{transform: rotate(90deg);}
+}
+
+.legmr .sublimb
+{
+	top: -30px;
+	height: 30px;
+	transform: rotate(70deg);
+	animation: legmrsub 2s ease-in-out infinite;
+}
+
+@keyframes legmrsub
+{
+	0%{transform: rotate(70deg);}
+	25%{transform: rotate(40deg);}
+	75%{transform: rotate(60deg);}
+	100%{transform: rotate(70deg);}
+}
+
+.legbl
+{
+	top: 14px;
+	left: 2px;
+
+	transform: rotate(-150deg);
+	animation: legbl 2s ease-in-out infinite;
+}
+
+@keyframes legbl
+{
+	0%{transform: rotate(-150deg);}
+	25%{transform: rotate(-155deg);}
+	75%{transform: rotate(-120deg);}
+	100%{transform: rotate(-150deg);}
+}
+
+.legbl > .sublimb
+{
+	transform: rotate(-25deg);
+	animation: legblsub 2s ease-in-out infinite;
+}
+
+.legbl > .sublimb > .sublimb
+{
+	transform: rotate(10deg);
+	animation: legblsubs 2s ease-in-out infinite;
+}
+
+@keyframes legblsubs
+{
+	0%{transform: rotate(10deg);}
+	25%{transform: rotate(-5deg);}
+	75%{transform: rotate(10deg);}
+	100%{transform: rotate(10deg);}
+}
+
+.legbr
+{
+	top: 14px;
+	right: 2px;
+
+	transform: rotate(150deg);
+	animation: legbr 2s ease-in-out infinite;
+}
+
+@keyframes legbr
+{
+	0%{transform: rotate(150deg);}
+	25%{transform: rotate(120deg);}
+	75%{transform: rotate(155deg);}
+	100%{transform: rotate(150deg);}
+}
+
+.legbr > .sublimb
+{
+	transform: rotate(25deg);
+	animation: legblsub 2s ease-in-out infinite;
+}
+
+.legbr > .sublimb > .sublimb
+{
+	transform: rotate(-10deg);
+	animation: legbrsubs 2s ease-in-out infinite;
+}
+
+@keyframes legbrsubs
+{
+	0%{transform: rotate(-10deg);}
+	25%{transform: rotate(-10deg);}
+	75%{transform: rotate(5deg);}
+	100%{transform: rotate(-10deg);}
+}
